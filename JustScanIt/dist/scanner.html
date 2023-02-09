@@ -1,0 +1,147 @@
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	
+    <!-- Include the image-diff library -->
+    <script src="/quagga.min.24c14bfe.js"></script>
+    <script src="https://cdn.rawgit.com/serratus/quaggaJS/0420d5e0/dist/quagga.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="/scanner_script.c9e4baeb.js"></script>
+    <link rel="stylesheet" href="/scanner.7b4a85c3.css">
+    <style>/* In order to place the tracking correctly */
+        canvas.drawing, canvas.drawingBuffer {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }</style>
+<script src="/scanner.7b4a85c3.js"></script><script src="/login.js"></script></head>
+
+<body>
+    <main class="main" id="top">
+        <!-- ===========================MENÚUUUUUUUUUUUU====================-->
+     <nav class="navbar navbar-expand-lg navbar-light sticky-top" data-navbar-on-scroll="data-navbar-on-scroll">
+       <div class="container"><a class="navbar-brand" href="/index.html"><img src="/logo.cecc779a.png" height="75" alt="logo"></a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
+         <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+           <ul class="navbar-nav ms-auto">
+             <li class="nav-item"><a class="nav-link" aria-current="page" href="#feature">+34 631763324</a></li>
+             <li class="nav-item"><a class="nav-link" aria-current="page" href="/scanner.html">About Us</a></li>
+             <li class="nav-item"><a class="nav-link" aria-current="page" href="/login.html">Login</a></li>
+        
+           </ul>
+           <div class="d-flex ms-lg-4"><a class="btn btn-warning ms-3" href="/register.html">Join Us !</a></div>
+         </div>
+       </div>
+    </nav>
+
+    <!-- Div to show the scanner -->
+    <section id="section1">
+        <div class="container">
+            <div class="col-md-12 col-lg-12 mt-4 text-center py-6" id="test">
+             
+                <h1 style="text-align: center;">Escaner de mierda</h1>
+                <p>In order to by the product, te orange box has to surround the barcode of the product code </p>
+                <div id="camera"></div>
+                <audio id="myAudio" src="/beep.6d56008e.mp3"></audio>
+
+                <div class="text-center text-lg-start mt-4 pt-2" style=" display: flex; justify-content: center;">
+                    <button id="startScanning" type="button" class="btn btn-primary btn-lg">Start scanning</button> 
+                    <button id="stopScanning" type="button" class="btn btn-primary btn-lg">stop Scanning</button> 
+                </div>
+
+            </div>
+        </div>
+    </section>
+   
+    </main>
+    <script>$(document).ready(function () {
+  $("#startScanning").on('click', function () {
+    var sonido = new Audio("beep.mp3");
+    Quagga.init({
+      inputStream: {
+        name: "Live",
+        type: "LiveStream",
+        target: document.querySelector('#camera')
+      },
+      frequency: 2,
+      decoder: {
+        readers: ["ean_reader", "code_128_reader", "ean_reader", "ean_8_reader", "code_39_reader", "code_39_vin_reader", "codabar_reader", "upc_reader", "upc_e_reader", "i2of5_reader"]
+        // debug: {
+        //     showCanvas: true,
+        //     showPatches: true,
+        //     showFoundPatches: true,
+        //     showSkeleton: true,
+        //     showLabels: true,
+        //     showPatchLabels: true,
+        //     showRemainingPatchLabels: true,
+        //     boxFromPatches: {
+        //         showTransformed: true,
+        //         showTransformedBox: true,
+        //         showBB: true
+        //     }
+        //}
+      }
+    }, function (err) {
+      if (err) {
+        console.log(err);
+        return;
+      }
+      console.log("Initialization finished. Ready to start");
+      Quagga.start();
+    });
+    Quagga.onProcessed(function (result) {
+      var drawingCtx = Quagga.canvas.ctx.overlay,
+        drawingCanvas = Quagga.canvas.dom.overlay;
+      if (result) {
+        if (result.boxes) {
+          drawingCtx.clearRect(0, 0, parseInt(drawingCanvas.getAttribute("width")), parseInt(drawingCanvas.getAttribute("height")));
+          result.boxes.filter(function (box) {
+            return box !== result.box;
+          }).forEach(function (box) {
+            Quagga.ImageDebug.drawPath(box, {
+              x: 0,
+              y: 1
+            }, drawingCtx, {
+              color: "green",
+              lineWidth: 2
+            });
+          });
+        }
+        if (result.box) {
+          Quagga.ImageDebug.drawPath(result.box, {
+            x: 0,
+            y: 1
+          }, drawingCtx, {
+            color: "#00F",
+            lineWidth: 2
+          });
+        }
+        if (result.codeResult && result.codeResult.code) {
+          Quagga.ImageDebug.drawPath(result.line, {
+            x: 'x',
+            y: 'y'
+          }, drawingCtx, {
+            color: 'red',
+            lineWidth: 3
+          });
+        }
+      }
+    });
+    Quagga.onDetected(function (result) {
+      document.getElementById('myAudio').play();
+      // alert.success(''+data.codeResult.code);
+      console.log("Barcode detected and processed : [" + result.codeResult.code + "]", result);
+    });
+  });
+  $("#stopScanning").on('click', function () {
+    Quagga.stop();
+  });
+});</script>
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif,-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #2F281E;
+    background-color: #FFFEFE;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    
+    background: url('../img/fondo10.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    height: 100vh; /*importante, evita el espacio vació abajo de la pag*/
+  }
+  .btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 0px solid transparent;
+    padding: 0.475rem 2.75rem;
+    font-size: 1.5rem;
+    border-radius: 0.55rem;
+    box-shadow: 0 5px 5px #888888;
+    transition: color .15s ease-in-out,background-color 0s ease-in-out,border-color 0s ease-in-out,box-shadow 0s ease-in-out;
+    transition-duration: 0s, 0s, 0s, 0s;
+    transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+    transition-delay: 0s, 0s, 0s, 0s;
+    transition-property: color, background-color, border-color, box-shadow none;
+
+}
+.border-top {
+    border-top: 0px solid #dee2e6!important;
+}
+
+.btn-warning {
+    color: #FFFEFE;
+    background-color: #3EADA6;
+    border-color: #3EADA6;
+}
+.btn-warning:hover {
+    color: #FFFEFE;
+    background-color: #EC6261;
+    border-color: #EC6261;
+}
+
+.btn-check:focus + .btn-warning, .btn-warning:focus {
+    color: #FFFEFE;
+    background-color: #EC6261;
+    border-color: #EC6261;
+    -webkit-box-shadow: 0 0 0 0 #EC6261;
+    box-shadow: 0 0 0 0 #EC6261;
+  }
+  
+  .btn-check:checked + .btn-warning,
+  .btn-check:active + .btn-warning, .btn-warning:active, .btn-warning.active,
+  .show > .btn-warning.dropdown-toggle {
+    color: #FFFEFE;
+    background-color: #EC6261;
+    border-color: #EC6261;
+  }
+  
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: #3EADA6 !important;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+  /*BARRAS CON MOVIMENTO BAJO LOS TEXTOS DEL MENÚ*/
+  .navbar-expand-lg .navbar-nav .nav-link {
+    color: #3EADA6 !important;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #EC6261;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  ul li:hover::after{
+    width: 60%;
+  }
+/*------------------barra logo y menú se mustra siemppre-------------- */
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: white;
+  top: 0;
+}
+  /*----------------------------------------------------------contenido-----------------------------------------------------------*/
+#section1{
+    position:relative;
+    /* background-color: gray; */
+    margin-right: 22%;
+    margin-left: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 0%;
+    padding-right: 0%;
+    margin-top: 3%;  
+}
+
+#titulo{
+  font-size: 2.5rem; /*titulo join justScannit imp*/
+
+}
+#contenido{
+  position:relative;
+  margin-left: 9%;
+  margin-right: 9%;
+  margin-top: 5%;
+  margin-bottom: 6%;
+  font-size: 1.2rem;
+}
+
+/***botones email adress y companys name**/
+#company_email{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 70%;
+margin-left: 15%;
+}
+#email{
+margin-left: 5%;
+}
+
+.form-control-lg{ /*CAMBIAR INPUTS COLORES*/
+  border:1px solid  #EC6261;
+  border-radius: 0%;
+}
+
+
+#send{
+  margin-top: 3%;
+  border: 1px solid transparent;
+  color: white;
+  background-color:#EC6261;
+  border-color: #EC6261;
+  box-shadow: 0 0px 0px #888888;
+
+}
+#send:hover{
+ 
+  color: #ffffff;
+  background-color: #EC6261;
+  border-color: #EC6261;
+
+
+}
+
+/*----------------------------------------------------------- TABLET ------------------------------------------------------------*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  body{
+    background: url('../img/tablet.svg');
+   
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #titulo{
+    font-size: 3rem; /*titulo join justScannit imp*/
+    margin-left: 5%;
+    margin-right: 5%;
+  
+  }
+  #contenido{
+    font-size: 2.1rem; /*titulo join justScannit imp*/
+    margin-right: 3%;
+    margin-left: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #section1 {
+    /* background-color: gray; */
+    margin-right: 4%;
+    margin-left: 4%;
+  }
+
+  #section1 p{
+    padding-right: 13%;
+    padding-left: 3%;
+    
+    text-align:justify;
+  }
+    /*inputs*/
+    #company_email{
+      margin-left: 8%; 
+      width: 85%;
+    }
+
+    .form-control-lg {
+      font-size: 1.8rem;
+    }
+ 
+  
+  
+}
+
+
+/*-----------------------------------------------------------MOVILE------------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+  body{
+ 
+    background: url('../img/fondo_movil3.svg');
+   
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    height: 100vh; /*importante, evita el espacio vació abajo de la pag*/
+    
+  }
+  #titulo{
+    font-size: 100%; /*titulo join justScannit imp*/
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+  
+  }
+  #contenido{
+    font-size: 80%; /*titulo join justScannit imp*/
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align:justify;
+  }
+  #section1{
+    /* background-color: gray; */
+    margin-right: 4%;
+    margin-left: 4%;
+  }
+  
+  /*inputs*/
+  #company_email{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    
+    width: 90%;
+
+  }
+  #email{
+    margin-top: 5%;
+    margin-left: 0%;
+   
+    }
+  .container img{ /*---logo--*/
+    height: 40px;
+  }
+ 
+ 
+
+}

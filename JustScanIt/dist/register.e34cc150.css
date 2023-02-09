@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif,-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #2F281E;
+    background-color: #FFFEFE;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  }
+
+  .btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 0px solid transparent;
+    padding: 0.475rem 2.75rem;
+    font-size: 1.5rem;
+    border-radius: 0.55rem;
+    box-shadow: 0 5px 5px #888888;
+    transition: color .15s ease-in-out,background-color 0s ease-in-out,border-color 0s ease-in-out,box-shadow 0s ease-in-out;
+    transition-duration: 0s, 0s, 0s, 0s;
+    transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+    transition-delay: 0s, 0s, 0s, 0s;
+    transition-property: color, background-color, border-color, box-shadow none;
+}
+.border-top {
+    border-top: 0px solid #dee2e6!important;
+}
+
+.btn-warning {
+    color: #FFFEFE;
+    background-color: #3EADA6;
+    border-color: #3EADA6;
+}
+.btn-warning:hover {
+    color: #FFFEFE;
+    background-color: #EC6261;
+    border-color: #EC6261;
+}
+
+.btn-check:focus + .btn-warning, .btn-warning:focus {
+    color: #FFFEFE;
+    background-color: #EC6261;
+    border-color: #EC6261;
+    -webkit-box-shadow: 0 0 0 0 #EC6261;
+    box-shadow: 0 0 0 0 #EC6261;
+  }
+  
+  .btn-check:checked + .btn-warning,
+  .btn-check:active + .btn-warning, .btn-warning:active, .btn-warning.active,
+  .show > .btn-warning.dropdown-toggle {
+    color: #FFFEFE;
+    background-color: #EC6261;
+    border-color: #EC6261;
+  }
+  
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: #3EADA6 !important;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+/*------------------barra logo y menú se mustra siemppre-------------- */
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: white;
+  top: 0;
+}
+
+/*------------contenido------------------------------*/
+section{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#condiciones{
+  font-size: 1.1rem;
+}
+.form-control-lg ,p {
+  font-size: 1.1rem;
+
+}
+#btJoinUsRegister{
+  width: 100%;
+  color: #FFFEFE;
+  background-color: #3EADA6;
+  box-shadow: 0 0px 0px #888888;
+}
+/*------------------algo que no es mio-------------- */
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+.form-control-lg{
+  border-radius: 0%;
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+
+/*-----------------------------------------------------------MOVILE------------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+  /*--------------------------------------------mostrar MENÚUUUUUUUUU*/
+.collapse:not(.show) {
+  margin-left: 40%;
+  background-color: rgb(230, 230, 230);
+}
+    body{
+      font-size: 1rem;
+    }
+    .btn-warning{
+      display: none;
+    };
+    .container img{
+      height: 40px;
+    }
+    #birthContainer{
+  
+        display: flex;
+        flex-direction: row !important;
+
+    }
+    #data{
+        max-width: 33% !important;
+    }
+    section{
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    #condiciones{
+      margin-top: 2%;
+      font-size: 60%;
+    }
+  }
+
+/*# sourceMappingURL=/register.e34cc150.css.map */

@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif,-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #2F281E;
+    background-color: #FFFEFE;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    background: url('../img/fondo10.svg') !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: 100vh !important;
+
+  }
+  .btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 0px solid transparent;
+    padding: 0.475rem 2.75rem;
+    font-size: 1.5rem;
+    border-radius: 0.55rem;
+    box-shadow: 0 5px 5px #888888;
+    transition: color .15s ease-in-out,background-color 0s ease-in-out,border-color 0s ease-in-out,box-shadow 0s ease-in-out;
+    transition-duration: 0s, 0s, 0s, 0s;
+    transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+    transition-delay: 0s, 0s, 0s, 0s;
+    transition-property: color, background-color, border-color, box-shadow none;
+}
+.border-top {
+    border-top: 0px solid #dee2e6!important;
+}
+
+.btn-warning {
+    color: #FFFEFE;
+    background-color: #3EADA6;
+    border-color: #3EADA6;
+}
+.btn-warning:hover {
+    color: #FFFEFE;
+    background-color: #EC6261;
+    border-color: #EC6261;
+}
+
+.btn-check:focus + .btn-warning, .btn-warning:focus {
+    color: #FFFEFE;
+    background-color: #EC6261;
+    border-color: #EC6261;
+    -webkit-box-shadow: 0 0 0 0 #EC6261;
+    box-shadow: 0 0 0 0 #EC6261;
+  }
+  
+  .btn-check:checked + .btn-warning,
+  .btn-check:active + .btn-warning, .btn-warning:active, .btn-warning.active,
+  .show > .btn-warning.dropdown-toggle {
+    color: #FFFEFE;
+    background-color: #EC6261;
+    border-color: #EC6261;
+  }
+  
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: #3EADA6 !important;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+  /*BARRAS CON MOVIMENTO BAJO LOS TEXTOS DEL MENÚ*/
+  .navbar-expand-lg .navbar-nav .nav-link {
+    color: #3EADA6 !important;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #EC6261;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  ul li:hover::after{
+    width: 60%;
+  }
+/*------------------barra logo y menú se mustra siemppre-------------- */
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: white;
+  top: 0;
+}
+
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+
+
+#app{
+    width: 300px;
+    height: 200px;
+    border: 1px solid red;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+#inner_container{
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+}
+#temporal{
+  width: 640px;
+  height: 450px;
+  border: 1px solid #888888;
+  margin-top: 2%;
+  /* opacity: 0.5; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* background: url('../img/plane.jpg');
+  opacity: 0.5;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+@media (max-width: 450px) {
+    .h-custom {
+    height: 100%;
+    }
+    }
+    
+    
+    /*-----------------------------------------------------------MOVILE------------------------------------------------------------*/
+    @media only screen and (max-width: 600px) {
+     
+        
+        .container img{
+          height: 40px;
+        }
+        section{
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+        /*----------------------------------------menú.-------------------*/
+        .form-control {
+          display: block;
+        }
+      }@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif,-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #2F281E;
+    background-color: #FFFEFE;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  }
+  .btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 0px solid transparent;
+    padding: 0.475rem 2.75rem;
+    font-size: 1.5rem;
+    border-radius: 0.55rem;
+    box-shadow: 0 5px 5px #888888;
+    transition: color .15s ease-in-out,background-color 0s ease-in-out,border-color 0s ease-in-out,box-shadow 0s ease-in-out;
+    transition-duration: 0s, 0s, 0s, 0s;
+    transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+    transition-delay: 0s, 0s, 0s, 0s;
+    transition-property: color, background-color, border-color, box-shadow none;
+}
+.border-top {
+    border-top: 0px solid #dee2e6!important;
+}
+
+.btn-warning {
+    color: #FFFEFE;
+    background-color: #3EADA6;
+    border-color: #3EADA6;
+}
+.btn-warning:hover {
+    color: #FFFEFE;
+    background-color: #EC6261;
+    border-color: #EC6261;
+}
+
+.btn-check:focus + .btn-warning, .btn-warning:focus {
+    color: #FFFEFE;
+    background-color: #EC6261;
+    border-color: #EC6261;
+    -webkit-box-shadow: 0 0 0 0 #EC6261;
+    box-shadow: 0 0 0 0 #EC6261;
+  }
+  
+  .btn-check:checked + .btn-warning,
+  .btn-check:active + .btn-warning, .btn-warning:active, .btn-warning.active,
+  .show > .btn-warning.dropdown-toggle {
+    color: #FFFEFE;
+    background-color: #EC6261;
+    border-color: #EC6261;
+  }
+  
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: #3EADA6 !important;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+/*------------------barra logo y menú se mustra siemppre-------------- */
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: white;
+  top: 0;
+}
+
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+
+
+/*-------------------------------------------------contenido------------------------*/
+#title{
+    font-size: 40px;
+    color: #3EADA6;
+    font-weight: bold;
+}
+#inner_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.products{
+    /* background-color: red; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10%;
+}
+product{
+    margin-top: 5%;
+    border-bottom: 1px solid #6c757d;
+    
+}
+#foto{
+    width: 30% !important;
+ 
+    display:flex;
+    flex-direction: start;
+}
+#foto img{
+    width: 80% !important;
+    padding-bottom: 4%;
+}
+
+.row{
+    display: flex;
+    flex-direction: row !important;
+
+}
+#info{
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+ 
+    text-align: start;
+    width: 70%;
+}
+#data_delete{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 3%;
+   
+}
+#name{
+    font-size: 25px;
+    font-weight: bold;
+}
+#data{
+    width:75%;
+    font-size:20px;
+    color:#6c757d;
+}
+.btdelete{
+    border: 0px;
+    background-color: transparent !important;
+    text-decoration: underline;
+    color:#6c757d;
+}
+#price{
+    font-size: 20px;
+    color: #6c757d;
+    
+}
+.btdelete:hover{
+    color:black;
+}
+
+#empty{ 
+    height: 400px;
+}
+#empty img{
+  opacity: 0.5;
+}
+/*----------------------------------------------------------- TABLET ------------------------------------------------------------*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    #title{
+        margin-top:5%;
+    }
+    .products{
+        width : 90%;
+        padding-bottom: 0%;
+        margin-top:5%;
+    }
+
+    #empty img{
+      opacity: 0.7;
+      height: 400px;
+      width: 600px;
+    }
+}
+
+/*-----------------------------------------------------------MOVILE------------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+
+    body{
+ 
+        background: url('../img/fondo_movil3.svg');
+       
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        height: 100vh; /*importante, evita el espacio vació abajo de la pag*/
+        
+      }
+
+    #title{
+        margin-top:0%;
+        font-size: 25px;
+    }
+    #name{
+        font-size: 20px;
+    }
+    #foto{
+        width:50%;
+       
+    }
+    #info{
+        height: 50%;
+    }
+    #foto img{
+        height: 100% !important;
+        padding-bottom: 4%;
+    }
+    .products{
+        width : 100%;
+        padding-bottom: 8%;
+        margin-top:5%;
+    }
+
+    #data{
+ 
+        font-size:15px;
+        color:#6c757d;
+    }
+    .btdelete{
+        font-size: 15px;
+    }
+
+  #empty{ 
+      height: 400px;
+  }
+  #empty img{
+    opacity: 0.5;
+    height: 200px;
+  }
+}

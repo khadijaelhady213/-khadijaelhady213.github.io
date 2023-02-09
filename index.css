@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+  }
+p{
+   font-family: 'Nunito', sans-serif ;
+    color: black;
+    font-weight: bolder ;
+    font-size: 13px;
+    
+}
+   h1{
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 4%;
+   }
+  .contenidor{
+    background-color: #B8F3BE;
+    padding-left: 15%;
+    padding-right: 15%;
+  
+  }
+  /*---------------------------cabecera----------------------------------*/
+  .contenidor{
+    min-height: 12vh;
+    box-shadow: 2px 2px 5px rgb(170, 167, 167);
+    
+  }
+  .logo{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-bottom: 2%;
+  }
+  .logo r{ /*----Cosmetic*/
+    color: black;
+    font-family: 'Whisper';
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: normal;
+  }
+  .test1{
+   padding-right: 0%;
+   font-family: 'Nunito', sans-serif;
+   color: black;
+   font-size: 18px;
+   font-weight:500;
+  }
+  
+  nav{ /*ordenar los elementos de la cabecera*/
+    display: flex;
+    padding: 2% 6% 0% 0%;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0%;
+    width: 100%;
+   
+  }
+  /*darle formato al menú*/
+  .menu{
+    flex: 1;
+    text-align: right;
+  }
+  .menu ul li{
+    list-style: none;
+    display: inline-block;
+     padding: 0px 12px; 
+    position: relative;
+    margin-left: 1%;
+
+  }
+  li a{
+    text-decoration: none;
+   
+  }
+  
+
+  
+  /*BARRAS CON MOVIMENTO BAJO LOS TEXTOS DEL MENÚ*/
+  .menu ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    
+  }
+  /*LAS BARRAS CONFIGURADAS ARRIBA NO APARECEN HASTA QUE SUCEDA EL CÓDIGO DE ABAJO*/
+  .menu ul li:hover::after{
+    width: 100%;
+  }
+  
+  /*--------------------fin cabezera---------------------------------------------------------------------------------*/
+  /*--------------------1r recuadro---------------------------------------------------------------------------------*/
+  
+  content{
+    /* background-color: red; */
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    justify-content: row;
+  }
+  #retrato{
+   
+    width: 30% !important;
+    background-color: #b8f3b8;
+  }
+  .welcomAbout{
+    width: 70%;
+    /* background-color: aqua; */
+    
+  }
+  .welcome{
+ 
+    margin-left: 6%;
+    padding: 20px 20px 25px 30px;
+    border: 1px dashed black;
+    display: self;
+    justify-content: column;
+    margin-right: 0px;
+  }
+  .welcomAbout .bar{
+    margin-left: 6%;
+  }
+  .bar{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    height: 12%;
+  }
+
+  .bar img{
+   
+    
+    width: 3%;
+    height: 100%;
+   
+  }
+  .barText{
+    width: 100%;
+  }
+  .barText{
+    
+    padding-top: 3%;
+    padding-bottom: 2%;
+    background-color: #D1C6BE;
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    
+  }
+
+  .row{
+    border-top: 1px dashed black;
+    padding-top: 5%;
+    margin-top: 5%;
+
+  }
+ .row01{
+  display: flex;
+  justify-content: row;
+  margin-bottom: 5%;
+ }
+ 
+  .container{
+    display: flex;
+    justify-content: row;
+  }
+  .row01 img{
+    padding-left: 5%;
+  }
+ .row1{
+  margin-left: 5%;
+ }
+ 
+  li{
+    padding-bottom: 1%;
+  }
+  h1{
+    display: flex;
+    justify-content: center;
+  }
+  /*--------------------fin 1r recuedro---------------------------------------------------------------------------------*/
+  .col{
+    width: 50%;
+  }
+  .content1 .welcome{
+    margin-left: 0%;
+  }
+  #firt{
+    padding-bottom: 6%;
+  }
+   #SOR{
+    background-color: #f3d4a5;
+    
+  }
+  #second{
+    margin-left: 4%;
+  }
+  #projects{
+    background-color: #008AFC4D;
+    opacity:1;
+  }
+  #graphic{
+    width : 36%;
+    padding-left: 55%;
+    margin-top: -10%;
+    margin-bottom: 0%;
+  }
+  .col1{
+    margin-right: 2%;
+  }
+  
+  #myprojectBar{
+    margin-left: 4%;
+  }
+
+  /*-----------------------------hober de las barras de colores*/
+ 
+   /*-----------------------------FIN hober de las barras de colores*/
+
+/*-----------------------------------------------froother*/
+.foot{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 20px 20px 20px 20px;
+  background-color: #b8f3b8;
+}

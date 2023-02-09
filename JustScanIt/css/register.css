@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif,-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #2F281E;
+    background-color: #FFFEFE;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 100vh;
+  }
+/*EVITAR QUE LOS BOTONES AL SER PULSADOS TENGAN SOMBRA AZUL*/
+btn:focus, a:focus, #btregister:focus
+{
+         outline: none !important;
+         box-shadow: none !important;
+         
+}
+.navbar-toggler:focus
+{
+         outline: none !important;
+         box-shadow: none;
+}
+  .btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 0px solid transparent;
+    padding: 0.475rem 2.75rem;
+    font-size: 1.5rem;
+    border-radius: 0.55rem;
+    box-shadow: 0 5px 5px #888888;
+    transition: color .15s ease-in-out,background-color 0s ease-in-out,border-color 0s ease-in-out,box-shadow 0s ease-in-out;
+    transition-duration: 0s, 0s, 0s, 0s;
+    transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+    transition-delay: 0s, 0s, 0s, 0s;
+    transition-property: color, background-color, border-color, box-shadow none;
+}
+.border-top {
+    border-top: 0px solid #dee2e6!important;
+}
+
+.btn-warning {
+    color: #FFFEFE;
+    background-color: #3EADA6;
+    border-color: #3EADA6;
+}
+.btn-warning:hover {
+    color: #FFFEFE;
+    background-color: #EC6261;
+    border-color: #EC6261;
+}
+
+.btn-check:focus + .btn-warning, .btn-warning:focus {
+    color: #FFFEFE;
+    background-color: #EC6261;
+    border-color: #EC6261;
+    -webkit-box-shadow: 0 0 0 0 #EC6261;
+    box-shadow: 0 0 0 0 #EC6261;
+  }
+  
+  .btn-check:checked + .btn-warning,
+  .btn-check:active + .btn-warning, .btn-warning:active, .btn-warning.active,
+  .show > .btn-warning.dropdown-toggle {
+    color: #FFFEFE;
+    background-color: #EC6261;
+    border-color: #EC6261;
+  }
+  /*BARRAS CON MOVIMENTO BAJO LOS TEXTOS DEL MENÚ*/
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: #3EADA6 !important;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #EC6261;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+ul li:hover::after{
+  width: 60%;
+}
+/*------------------barra logo y menú se mustra siemppre-------------- */
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: white;
+  top: 0;
+}
+
+/*------------contenido------------------------------*/
+section{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 0%;
+  padding-top: 0%;
+}
+#condiciones{
+  font-size: 1.1rem;
+}
+.form-control-lg ,p {
+  font-size: 1.1rem;
+
+}
+#btJoinUsRegister{
+  margin-top: 4%;
+  width: 100%;
+  color: #FFFEFE;
+  background-color: #3EADA6;
+  box-shadow: 0 0px 0px #888888;
+}
+/*------------------algo que no es mio-------------- */
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+
+
+#form2Example3:focus{
+background-color: #3EADA6;
+border: #3EADA6;
+outline: none !important;
+box-shadow: none;
+}
+#form2Example3:after{
+  background-color: #3EADA6;
+  border: #3EADA6;
+  outline: none !important;
+  box-shadow: none;
+  }
+.h-custom {
+
+ 
+  padding-top: 0%;
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+
+/*-----------------------------------------------------------TABLET------------------------------------------------------------*/
+@media (min-width: 768px) and (max-width: 1024px) {
+ 
+  body{
+    background: url('../img/tabletVerde1.svg');
+   
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #imgenSection{
+   width: 0%;
+   
+  }
+  #imgenSection img{
+    width: 0px;
+  }
+  #formulario{
+    width: 100%;
+  
+  }
+  #condiciones , p{
+    font-size: 1.5rem;
+  }
+  .form-control-lg{
+    font-size: 1.9rem;
+  }
+  #registerTitle{
+    font-size: 2.5rem;
+  }
+  input{
+    margin-bottom: 5%;
+  }
+
+  #btJoinUsRegister{
+    width: 100%;
+    margin-top: 4%;
+    color: white;
+    background-color: #3EADA6;;
+    box-shadow: 0 0px 0px #888888;
+    font-size: 2.5rem;
+  }
+
+  #btJoinUsRegister:hover{
+    width: 100%;
+    color: white;
+    background-color: #EC6261;;
+    box-shadow: 0 0px 0px #888888;
+    font-size: 2.5rem;
+  }
+
+  #registerTitle{
+  
+    margin-top: -10%;
+  }
+}
+
+/*-----------------------------------------------------------MOVILE------------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+
+body{
+  overflow: hidden;
+}
+  /*--------------------------------------------mostrar MENÚUUUUUUUUU*/
+.row {
+   --bs-gutter-x: 1.5rem;
+}
+.mt-4 {
+  margin-top: 0rem!important; 
+}
+/*-----------fin ajustes menu------------------*/
+#menuSecrtion{
+  padding-top: 0%;
+  padding-bottom: 0%;
+  margin-top: 0rem;
+ 
+}
+
+/*--------------------------------------------------------------------*/
+
+#imgenSection{
+  width: 0%;
+  
+ }
+ #imgenSection img{
+   width: 0px;
+ }
+ #birthContainer{
+  display: flex;
+  flex-direction: row !important;
+ }
+ #data{
+  width: 33%;
+ }
+ #condiciones , p{
+   font-size: 1rem;
+   text-align: justify;
+ }
+ .form-control-lg{
+   font-size: 1.5rem;
+ }
+ #registerTitle{
+   font-size: 2.5rem;
+   margin-top: -7%;
+ }
+
+ input{
+   margin-bottom: 5%;
+ }
+
+ #btJoinUsRegister{
+   width: 100%;
+   color: white;
+   background-color: #3EADA6;;
+   box-shadow: 0 0px 0px #888888;
+   font-size: 2rem;
+   padding: 4% 0% 4% 0%;
+ }
+
+ #btJoinUsRegister:hover{
+   width: 100%;
+   color: white;
+   background-color: #EC6261;;
+   box-shadow: 0 0px 0px #888888;
+   font-size: 2.5rem;
+ }
+
+    
+  }

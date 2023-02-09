@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+  }
+p, u{
+font-family: 'Nunito', sans-serif ;
+color: black;
+font-weight: bolder ;
+font-size: 14px;
+}
+h1{
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 1%;
+}
+/*--------------CABEZERA------------------*/
+#contenidor{
+    background-color: #B8F3BE;
+    padding-left: 15%;
+    padding-right: 15%;
+    min-height: 12vh;
+    box-shadow: 2px 2px 5px rgb(170, 167, 167);
+    
+  }
+#logo{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-bottom: 0%;
+  }
+
+#logo r{ /*----Cosmetic*/
+    color: black;
+    font-family: 'Whisper';
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: normal;
+  }
+.nav-link{
+   padding-right: 0%;
+   font-family: 'Nunito', sans-serif;
+   color: black;
+   font-size: 18px;
+   font-weight:500;
+  }
+  
+
+  /*darle formato al menú*/
+#menuSecrtion{
+    flex: 1;
+    text-align: right;
+    width: 100%;
+}
+#menuSecrtion ul{
+  
+  width: 60%;
+}
+#menuSecrtion ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0px 12px; 
+    position: relative;
+    margin-left: 1%;
+    width: 100%;
+    padding-right: 0%;
+
+}
+#menuSecrtion li a{
+    text-decoration: none;
+    width: 100%;
+    margin-left: 0%;
+}
+  
+/*BARRAS CON MOVIMENTO BAJO LOS TEXTOS DEL MENÚ*/
+#menuSecrtion  ul li a:hover{
+  font-weight: bold;
+}
+  /*--------------------fin cabezera---------------------------------------------------------------------------------*/
+  /*--------------------1r recuadro---------------------------------------------------------------------------------*/
+  
+.welcomAbout{
+    /* background-color: red; */
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%; 
+    /* background-color: aqua; */
+  }
+  .welcome{
+    padding: 20px 20px 25px 30px;
+    border: 1px dashed black;
+    text-align: center; 
+  }
+#graphic{
+    width : 15%;
+    padding-left: 2%;
+    margin-top: -4%;
+    margin-bottom: 0%;
+}
+
+  /*-----------------------------titulo y explicación proyects*/
+.peojectsContent{
+    
+    margin-left: 28%;
+    margin-right: 15%;
+    margin-top: -2%;
+}
+.project{
+    margin-bottom: 8%;
+   
+}
+.fila{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+
+.project p {
+    border-top: 1px dashed black;
+    padding-top: 1%;
+    /* margin-right: 5%; */
+    text-align: justify;
+    min-width: 60%;
+    max-width: 60%;
+    
+}
+.codeAndVideo{
+  margin-left: 8%;
+ 
+ 
+}
+.codeAndVideo a img{
+    width: 24%;
+    margin-left: 20%;
+  
+}  
+ 
+u{ 
+    padding-top: 0%;
+    width: 100%;
+   
+}
+   
+.cv{
+   display: flex;
+   align-content: center;
+   margin-bottom: 10%;
+   margin-top: 5%;
+   
+}
+.cv u{
+
+  min-width: 50%;
+  max-width: 50%;
+}
+/*-----------------------------titulo y explicación proyects*/
+
+/****************HOVER IMAGENES---------------------------------*/
+.cv a img:hover{
+  cursor: pointer;
+  min-width: 22%;
+  max-width: 22%;
+  padding-bottom: 2%;
+  margin-right: 0%;
+
+
+}
+.cv a {
+  
+  margin-right: 3%;
+  
+  padding-right: 0%;
+ 
+
+}
+
+
+/*-----------------------------------------------froother*/
+.foot{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 20px 20px 20px 20px;
+  background-color: #b8f3b8;
+}
+/*-----------------------------------------------------------MOVILE RESPONSIVE------------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+  .welcome{
+    margin: 0%;
+    margin-left: 0%;
+    min-width: 100%;
+   
+  }
+  .welcome h1{
+    font-size: 30px;
+  }
+ 
+  .peojectsContent{
+    margin-top: 3%;
+  }
+ .btn-warning{
+    display: none;
+  }
+
+  #logo { 
+    font-size: 40%;
+  }
+ .nav-link{
+   font-size: 38px;
+  }
+  .peojectsContent{
+    
+    margin-right: 10%;
+    margin-left: 10%;
+   
+  }
+  .project p{
+    min-width: 100%;
+    max-width: 100%;
+}
+
+  .fila{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .cv u{
+
+    min-width: 30%;
+    max-width: 30%;
+    margin-top: 0%;
+  }
+  .codeAndVideo{
+    margin-left: 0%;
+   
+   
+  }
+  .codeAndVideo a img{
+      width: 15%;
+      margin-left: 13%;
+    
+  }
+  .foot{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .project p{
+    font-size: 18px;
+  }
+  .project h1{
+    font-size: 20;
+    font-weight: bold;
+  }
+
+
+
+}
