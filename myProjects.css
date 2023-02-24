@@ -57,28 +57,47 @@ h1{
 }
 #menuSecrtion ul{
   
-  width: 60%;
+  width: 90%;
+  display: flex;
+  justify-content: end;
 }
 #menuSecrtion ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 0px 12px; 
-    position: relative;
-    margin-left: 1%;
-    width: 100%;
-    padding-right: 0%;
+  list-style: none;
+  display: inline-block;
+  padding: 0px 12px; 
+  position: relative;
+  margin-left: 1%;
+  padding-right: 0%;
 
 }
 #menuSecrtion li a{
     text-decoration: none;
     width: 100%;
     margin-left: 0%;
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
 }
-  
-/*BARRAS CON MOVIMENTO BAJO LOS TEXTOS DEL MENÚ*/
-#menuSecrtion  ul li a:hover{
-  font-weight: bold;
-}
+ 
+
+  /*BARRAS CON MOVIMENTO BAJO LOS TEXTOS DEL MENÚ*/
+  #menuSecrtion ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    
+  }
+  /*LAS BARRAS CONFIGURADAS ARRIBA NO APARECEN HASTA QUE SUCEDA EL CÓDIGO DE ABAJO*/
+  #menuSecrtion ul li:hover::after{
+    width: 100%;
+  }
+
+
   /*--------------------fin cabezera---------------------------------------------------------------------------------*/
   /*--------------------1r recuadro---------------------------------------------------------------------------------*/
   
@@ -255,6 +274,16 @@ u{
   .project h1{
     font-size: 20;
     font-weight: bold;
+  }
+
+  .nav-link{
+    font-size: 20px;
+    font-weight: 300;
+  }
+  #contenidor{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
   }
 
 

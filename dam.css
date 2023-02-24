@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+  }
+p, u{
+font-family: 'Nunito', sans-serif ;
+color: black;
+font-weight: bolder ;
+font-size: 14px;
+}
+h1{
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 1%;
+}
+/*--------------CABEZERA------------------*/
+#contenidor{
+    background-color: #B8F3BE;
+    padding-left: 15%;
+    padding-right: 15%;
+    min-height: 12vh;
+    box-shadow: 2px 2px 5px rgb(170, 167, 167);
+    
+  }
+#logo{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-bottom: 0%;
+  }
+
+#logo r{ /*----Cosmetic*/
+    color: black;
+    font-family: 'Whisper';
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: normal;
+  }
+.nav-link{
+   padding-right: 0%;
+   font-family: 'Nunito', sans-serif;
+   color: black;
+   font-size: 18px;
+   font-weight:500;
+  }
+  
+
+  /*darle formato al menú*/
+#menuSecrtion{
+    flex: 1;
+    text-align: right;
+    width: 100%;
+   
+}
+#menuSecrtion ul{
+  
+  width: 90%;
+  display: flex;
+  justify-content: end;
+}
+#menuSecrtion ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0px 12px; 
+    position: relative;
+    margin-left: 1%;
+    padding-right: 0%;
+
+
+}
+#menuSecrtion li a{
+    text-decoration: none;
+    width: 100%;
+    margin-left: 0%;
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+  
+/*BARRAS CON MOVIMENTO BAJO LOS TEXTOS DEL MENÚ*/
+#menuSecrtion ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    
+}
+  /*LAS BARRAS CONFIGURADAS ARRIBA NO APARECEN HASTA QUE SUCEDA EL CÓDIGO DE ABAJO*/
+  #menuSecrtion ul li:hover::after{
+    width: 100%;
+  }
+  /*--------------------fin cabezera---------------------------------------------------------------------------------*/
+  /*--------------------1r recuadro---------------------------------------------------------------------------------*/
+  
+.welcomAbout{
+    /* background-color: red; */
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%; 
+    /* background-color: aqua; */
+  }
+  .welcome{
+    padding: 20px 20px 25px 30px;
+    border: 1px dashed black;
+    text-align: center; 
+  }
+#graphic{
+    width : 15%;
+    padding-left: 2%;
+    margin-top: -4%;
+    margin-bottom: 0%;
+}
+
+  /*-----------------------------titulo y explicación proyects*/
+.peojectsContent{
+    
+    margin-left: 28%;
+    margin-right: 15%;
+    margin-top: -2%;
+}
+.project{
+    margin-bottom: 8%;
+    padding-right: 5%;
+    
+   
+}
+.fila ul{
+  padding-left: 0%;   /*  personalizar lista de los modulos  */
+  list-style: none;
+  padding-top: 2%;
+}
+
+.project p {
+  /* margin-right: 5%; */
+  text-align: justify;
+  min-width: 100% !important;
+  max-width: 100% !important;
+    
+   
+    
+}
+ 
+
+
+/*-----------------------------------------------froother*/
+.foot{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 20px 20px 20px 20px;
+  background-color: #b8f3b8;
+}
+/*-----------------------------------------------------------MOVILE RESPONSIVE------------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+  .welcome{
+    margin: 0%;
+    margin-left: 0%;
+    min-width: 100%;
+   
+  }
+  .welcome h1{
+    font-size: 30px;
+  }
+ 
+  .peojectsContent{
+    margin-top: 3%;
+  }
+ .btn-warning{
+    display: none;
+  }
+
+  #logo { 
+    font-size: 40%;
+  }
+ .nav-link{
+   font-size: 38px;
+  }
+  .peojectsContent{
+    
+    margin-right: 10%;
+    margin-left: 10%;
+   
+  }
+  .project p{
+    min-width: 100%;
+    max-width: 100%;
+}
+
+  .fila{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+
+  .project p{
+    font-size: 18px;
+  }
+  .project h1{
+    font-size: 20;
+    font-weight: bold;
+  }
+
+  .nav-link{
+    font-size: 20px;
+    font-weight: 300;
+  }
+  #contenidor{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+}

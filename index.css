@@ -157,10 +157,14 @@ p{
     
   }
 
+  #firt p{
+    text-align: justify;
+  }
   .row{
     border-top: 1px dashed black;
     padding-top: 5%;
     margin-top: 5%;
+    width: 70%;
 
   }
  .row01{
@@ -211,7 +215,7 @@ p{
   #graphic{
     width : 36%;
     padding-left: 55%;
-    margin-top: -10%;
+    margin-top: -5%;
     margin-bottom: 0%;
   }
   .col1{
@@ -221,6 +225,7 @@ p{
   #myprojectBar{
     margin-left: 4%;
   }
+
 
   /*-----------------------------hober de las barras de colores*/
  
